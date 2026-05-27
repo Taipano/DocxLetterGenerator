@@ -1,0 +1,189 @@
+﻿<Window x:Class="DocxLetterGenerator.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Генератор официальных писем" Height="800" Width="850"
+        WindowStartupLocation="CenterScreen">
+
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid Margin="15">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+
+            <Border Grid.Row="0" BorderBrush="#FF4CAF50" BorderThickness="2" CornerRadius="8" 
+                    Margin="0,0,0,15" Padding="15">
+                <StackPanel>
+                    <Label Content="🏦 ИНФОРМАЦИЯ ОБ ОТПРАВИТЕЛЕ (БАНК)" 
+                           FontWeight="Bold" FontSize="14" Foreground="#FF4CAF50" 
+                           HorizontalAlignment="Center" Margin="0,-10,0,10" Background="White" Padding="5"/>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Content="Название банка:*" Grid.Row="0" Grid.Column="0" 
+                               Margin="0,5" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                        <TextBox x:Name="txtBankName" Text="БедБанк" Grid.Row="0" Grid.Column="1" 
+                                 Margin="0,5" Height="32" VerticalAlignment="Center"/>
+
+                        <Label Content="Полное название:" Grid.Row="1" Grid.Column="0" 
+                               Margin="0,5" VerticalAlignment="Center"/>
+                        <TextBox x:Name="txtBankFullName" Text="Акционерный коммерческий банк Бедный банк" 
+                                 Grid.Row="1" Grid.Column="1" Margin="0,5" Height="32"/>
+
+                        <Label Content="Адрес банка:" Grid.Row="2" Grid.Column="0" 
+                               Margin="0,5" VerticalAlignment="Center"/>
+                        <TextBox x:Name="txtBankAddress" Text="ул. Лубянка д.10" 
+                                 Grid.Row="2" Grid.Column="1" Margin="0,5" Height="32"/>
+
+                        <Label Content="Контакты банка:" Grid.Row="3" Grid.Column="0" 
+                               Margin="0,5" VerticalAlignment="Center"/>
+                        <TextBox x:Name="txtBankContacts" Text="тел. (910) 889 33 71   E-mail: POschool@mail.ru" 
+                                 Grid.Row="3" Grid.Column="1" Margin="0,5" Height="32"/>
+
+                        <Label Content="Должность отправителя:*" Grid.Row="4" Grid.Column="0" 
+                               Margin="0,5" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                        <TextBox x:Name="txtSenderPosition" Text="Директор" 
+                                 Grid.Row="4" Grid.Column="1" Margin="0,5" Height="32"/>
+
+                        <Label Content="ФИО отправителя:*" Grid.Row="5" Grid.Column="0" 
+                               Margin="0,5" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                        <TextBox x:Name="txtSenderName" Text="Р.С. Воробьев" 
+                                 Grid.Row="5" Grid.Column="1" Margin="0,5" Height="32"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+
+            <Border Grid.Row="1" BorderBrush="#FF2196F3" BorderThickness="2" CornerRadius="8" 
+                    Margin="0,0,0,15" Padding="15">
+                <StackPanel>
+                    <Label Content="👤 ИНФОРМАЦИЯ О ПОЛУЧАТЕЛЕ" 
+                           FontWeight="Bold" FontSize="14" Foreground="#FF2196F3" 
+                           HorizontalAlignment="Center" Margin="0,-10,0,10" Background="White" Padding="5"/>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Content="Должность получателя:*" Grid.Row="0" Grid.Column="0" 
+                               Margin="0,5" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                        <TextBox x:Name="txtRecipientPost" Text="Генеральному директору" 
+                                 Grid.Row="0" Grid.Column="1" Margin="0,5" Height="32"/>
+
+                        <Label Content="Организация получателя:*" Grid.Row="1" Grid.Column="0" 
+                               Margin="0,5" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                        <TextBox x:Name="txtRecipientOrg" Text="Школа программирования" 
+                                 Grid.Row="1" Grid.Column="1" Margin="0,5" Height="32"/>
+
+                        <Label Content="ФИО получателя:*" Grid.Row="2" Grid.Column="0" 
+                               Margin="0,5" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                        <TextBox x:Name="txtRecipientName" Text="А.С. Николаеву" 
+                                 Grid.Row="2" Grid.Column="1" Margin="0,5" Height="32"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+
+            <Border Grid.Row="2" BorderBrush="#FFFF9800" BorderThickness="2" CornerRadius="8" 
+                    Margin="0,0,0,15" Padding="15">
+                <StackPanel>
+                    <Label Content="📄 ИНФОРМАЦИЯ О ПИСЬМЕ" 
+                           FontWeight="Bold" FontSize="14" Foreground="#FFFF9800" 
+                           HorizontalAlignment="Center" Margin="0,-10,0,10" Background="White" Padding="5"/>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                            <RowDefinition Height="Auto"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="140"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Label Content="Номер письма:*" Grid.Row="0" Grid.Column="0" 
+                               Margin="0,5" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                        <TextBox x:Name="txtLetterNumber" Text="1 - 5/29" 
+                                 Grid.Row="0" Grid.Column="1" Margin="0,5" Height="32"/>
+
+                        <Label Content="Дата письма:" Grid.Row="1" Grid.Column="0" 
+                               Margin="0,5" VerticalAlignment="Center"/>
+                        <TextBox x:Name="txtLetterDate" Text="11.03.2004" 
+                                 Grid.Row="1" Grid.Column="1" Margin="0,5" Height="32"/>
+
+                        <Label Content="Тема письма:*" Grid.Row="2" Grid.Column="0" 
+                               Margin="0,5" VerticalAlignment="Center" FontWeight="SemiBold"/>
+                        <TextBox x:Name="txtSubject" Text="О проведении мероприятий" 
+                                 Grid.Row="2" Grid.Column="1" Margin="0,5" Height="32"/>
+
+                        <Label Content="Текст письма:*" Grid.Row="3" Grid.Column="0" 
+                               Margin="0,5,0,10" VerticalAlignment="Top" FontWeight="SemiBold"/>
+                        <TextBox x:Name="txtBody" Grid.Row="3" Grid.Column="1" 
+                                 AcceptsReturn="True" TextWrapping="Wrap" 
+                                 VerticalScrollBarVisibility="Auto" MinHeight="150" Height="180"
+                                 Text="Уважаемый коллега!"/>
+                    </Grid>
+                </StackPanel>
+            </Border>
+
+            <Border Grid.Row="3" BorderBrush="#FF9C27B0" BorderThickness="2" CornerRadius="8" 
+                    Margin="0,0,0,15" Padding="15">
+                <StackPanel>
+                    <Label Content="📎 ПРИЛОЖЕНИЯ К ПИСЬМУ" 
+                           FontWeight="Bold" FontSize="14" Foreground="#FF9C27B0" 
+                           HorizontalAlignment="Center" Margin="0,-10,0,10" Background="White" Padding="5"/>
+
+                    <Button Content="➕ Добавить приложение" Width="180" Height="35" 
+                            Click="AddAttachment_Click" Margin="0,0,0,15"
+                            Background="#FF9C27B0" Foreground="White" FontWeight="SemiBold"
+                            Cursor="Hand"/>
+
+                    <ListView x:Name="lvAttachments" Height="150" Margin="0,0,0,10">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn Header="№" Width="50" DisplayMemberBinding="{Binding Number}"/>
+                                <GridViewColumn Header="Заголовок приложения" Width="400" DisplayMemberBinding="{Binding Title}"/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                        <Button Content="✏ Редактировать" Width="110" Height="32" 
+                                Click="EditAttachment_Click" Margin="0,0,10,0" Cursor="Hand"/>
+                        <Button Content="🗑 Удалить" Width="100" Height="32" 
+                                Click="DeleteAttachment_Click" Cursor="Hand"/>
+                    </StackPanel>
+                </StackPanel>
+            </Border>
+
+            <Button Grid.Row="4" Content="📄 СОЗДАТЬ ПИСЬМО DOCX" Height="60" FontSize="16" 
+                    FontWeight="Bold" Click="GenerateLetter_Click" 
+                    Background="#FF4CAF50" Foreground="White" Cursor="Hand" Margin="0,10,0,20"/>
+        </Grid>
+    </ScrollViewer>
+</Window>

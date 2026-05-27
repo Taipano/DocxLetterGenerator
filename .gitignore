@@ -1,0 +1,45 @@
+# Папки с результатами сборки
+bin/
+obj/
+Debug/
+Release/
+x64/
+x86/
+
+# Файлы Visual Studio
+*.user
+*.suo
+*.sln.docstates
+*.vs/
+.vs/
+
+# Файлы резервных копий
+*.bak
+*.tmp
+*~
+
+# Логи и отладка
+*.log
+*.cache
+*.pidb
+*.userprefs
+
+# Папка с пакетами NuGet
+packages/
+*.nupkg
+
+# Rider (если используешь)
+.idea/
+
+# Mac OS
+.DS_Store
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Результаты тестов
+TestResults/
+
+# Файлы публикации
+publish/
